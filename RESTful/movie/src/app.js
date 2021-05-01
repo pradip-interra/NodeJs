@@ -1,28 +1,11 @@
 // imports
 const { request, response } = require('express');
+const movies = require('./datastore.d');  // our datastore
 const express = require('express'); // this returns a function
 const app = express();  // general convention to call it as app
 
 app.use(express.json()); // for Joi
 
-// datastore
-const movies = [
-    {
-        id: 1,
-        name: "DDJL",
-        genre: "romantic",
-    },
-    {
-        id: 2,
-        name: "Murder",
-        genre: "thriller",
-    },
-    {
-        id: 3,
-        name: "Don",
-        genre: "triller",
-    },
-];
 
 // REST endpoints implementation
 
